@@ -5,17 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth/message")
-public class SecurityController {
-	@GetMapping("/securtiy")
-	public String welcomeMsg() {
-		return "Welcome to spring security";
-
-	}
-
-	@GetMapping("/login")
-	public String login() {
-		String msg = "Welcome to login";
+@RequestMapping
+public class AcessDeniedController {
+	@GetMapping("/403")
+	public String accessDenied() {
+		String msg = "AcessDenied 403";
 		return msg;
 	}
 }
